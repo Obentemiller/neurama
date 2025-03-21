@@ -25,26 +25,33 @@ To incorporate Neurama into your project:
 ```cpp
 #include "neurama.h"
 #include <vector>
+#include <iostream>
 
 int main() {
-    // Initialize the neural network
+    // 🚀 Inicialização da Rede Neural
     NeuralNetwork nn;
     nn.addLayer(2, 4, actMethod::ReLU, InitMethod::XAVIER);
     nn.addLayer(4, 1, actMethod::sigmoid, InitMethod::XAVIER);
 
-    // Training data: XOR problem
+    // 🔍 Dados de treinamento para o problema XOR
     std::vector<std::vector<double>> trainInputs = { {0, 0}, {0, 1}, {1, 0}, {1, 1} };
     std::vector<std::vector<double>> trainTargets = { {0}, {1}, {1}, {0} };
 
-    // Train the network
+    // 💡 Exemplo de entrada para visualização do treinamento
     std::vector<double> sampleInput = {0, 1};
-    nn.trainModel(trainInputs, trainTargets, 1000, 0.01, sampleInput, OptimizerType::ADAM);
 
-    // Test the network
+    // ⚙️ Treinamento da rede
+    std::cout << "Iniciando treinamento... 🔥" << std::endl;
+    nn.trainModel(trainInputs, trainTargets, 1000, 0.01, sampleInput, OptimizerType::ADAM);
+    std::cout << "Treinamento concluído! ✅" << std::endl;
+
+    // 🧪 Testando a rede com os dados de treinamento
+    std::cout << "\nResultados dos testes:" << std::endl;
     nn.testModel(trainInputs, trainTargets);
 
     return 0;
 }
+
 ```
 
 ## Documentation
