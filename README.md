@@ -23,6 +23,32 @@ To incorporate Neurama into your project:
 ## Example
 
 ```cpp
+
+
+/*
+funções de ativação:
+
+    ReLU,      // 0
+    sigmoid,   // 1
+    tanh,      // 2
+    leakyReLU, // 3
+    elu,       // 4
+    softplus   // 5
+    softmax    // 6 - NOVO!
+
+funções de otimização:
+
+    SGD,
+    ADAM
+
+funções de erro:
+
+    MSE,               // Erro Quadrático Médio
+    MAE,               // Erro Absoluto Médio
+    BinaryCrossEntropy // Entropia Cruzada Binária
+*/
+
+
 #include "neurama.h"
 #include <vector>
 #include <iostream>
