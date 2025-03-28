@@ -66,7 +66,7 @@ int main() {
     // 💡 Exemplo de entrada para visualização do treinamento
     std::vector<double> sampleInput = {0, 1};
 
-    int ephocs = 1000;
+    int ephocs = 100;
     float learning_rate = 0.01
     // ⚙️ Treinamento da rede
     std::cout << "Iniciando treinamento... 🔥" << std::endl;
